@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project type="sming">
+	<name>Ultrasonic library example</name>
+	<comment></comment>
+	
+	<serial>
+	  <port>COM1</port>
+	</serial>
+	
+	<sming>
+	  <modules>
+          <system>
+            $(SMF)system 
+            $(SMF)system/helpers 
+            $(SMF)Wiring 
+            $(SMF)SmingCore 
+            $(SMF)SmingCore/Network 
+            $(SMF)SmingCore/Platform  
+            $(SMF)appinit 
+          </system>
+
+          <service id="SpifFS"/>
+          <service id="ArduinoJson"/>
+          <service id="WebHelpers"/>
+          <service id="DateTime"/> 
+
+          <libs>
+            $(SMF)Libraries/Ultrasonic       
+          </libs>
+                    
+          <user>
+            app             
+          </user>
+      <modules>
+	</sming>
+
+</project>
